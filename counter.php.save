@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Productos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <link rel="stylesheet" href="headerStyle.css">
+</head>
+<style>
+button {
+        padding: 25px;
+}
+.tableCenter {
+        text-align: center;
+}
+table {
+        width: 100%;
+        border-spacing: 10px 15px;
+        border: solid #DCDCDC 2px;
+        border-collapse: collapse;
+        margin-bottom: 70px;
+}
+th, td {
+        border: solid #DCDCDC 1px;
+        padding: 20px;
+}
+.card {
+    font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    height: 30px;
+    width: 6em;
+    padding: 0.5em 1em;
+    vertical-align: middle;
+}
+
+.flag {
+    visibility: hidden;
+    top: 33px;
+    right: -33px;
+    transform: rotate(90deg);
+    position: fixed;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #808080;
+  color: white;
+  text-align: center;
+}
+  .submenu{
+    top: 70px;
+    right: 0;
+    position: fixed;
+    display: none;
+    width: 18%;
+    background: dimgrey;
+    float:inherit;
+  }
+  .submenu ul li{
+    display: block;
+    width: 100%;
+  }
+  li button {
+    width: 100%;
+    padding: 20px;
+    background-color: #FFF;
+  }
+  .submenu nav ul button{
+    display: block;
+    width: 100%;
+    height: inherit;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    color: #FFF;
+  }
+  nav ul button:hover{
+    background: dimgrey;
+  }
+  nav ul li:hover .submenu{
+    display: block;
+  }
+.bg-Ger {
+    background: -webkit-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+    background: -o-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+    background: -moz-linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+    background: linear-gradient(110deg, #000 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #dd0000 66%, #ffc608 66%);
+}
+.bg-Spa {
+    background: -webkit-linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, yellow 66%, red 66%);
+    background: -o-linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, yellow 66%, red 66%);
+    background: -moz-linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, yellow 66%, red 66%);
+    background: linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, yellow 66%, red 66%);
+}
+.bg-Jap{
+    background-image:radial-gradient(circle, red 33%, white 33%, white);
+}
+.bg-Fre{
+    background: -webkit-linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, white 66%, blue 66%);
+    background: -o-linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, white 66%, blue 66%);
+    background: -moz-linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, white 66%, blue 66%);
+    background: linear-gradient(110deg, red 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, white 66%, blue 66%);
+}
+.bg-Eng{
+    background: -webkit-linear-gradient(110deg, white 33%, rgba(0, 0, 0, 0) 33%), -webkit-linear-gradient(110deg, red 66%, white 66%);
+    background: -o-linear-gradient(110deg, white 33%, rgba(0, 0, 0, 0) 33%), -o-linear-gradient(110deg, red 66%, white 66%);
+    background: -moz-linear-gradient(110deg, white 33%, rgba(0, 0, 0, 0) 33%), -moz-linear-gradient(110deg, red 66%, white 66%);
+    background: linear-gradient(110deg, white 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, red 66%, white 66%);
+}
+#counter {
+        text-align: center;
+        font-size: 100px;
+        padding-top: 250px;
+}
+</style>
+<body>
+<?php
+include('headerStyle.php');
+$csession = 'contadorAndresSession';
+$nsession = 0;
+
+$ccookie = 'contadorAndresCookie';
+$ncookie = 0;
+
+$ncookie++;
+
+setcookie($ccookie, $ncookie);
+
+if(isset($_SESSION[$csession])) {
+   $nsession = $_SESSION[$csession];
+}
+
+$nsession++;
+
+$_SESSION[$csession] = $nsession;
+
+echo "<p id='counter'>" . $_SESSION[$csession] . "</p>";
+echo "<p id='counter'>" . $_COOKIE[$ccookie] . "</p>";
+?>
+
+</body>
+</html>

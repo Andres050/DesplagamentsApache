@@ -1,0 +1,35 @@
+<?php
+//ESPAÑOL
+$lang = array(
+
+        "logfor" => "Has iniciado sesion con",
+	"Log" => "Iniciar Sesión",
+    	"Home" => "Casa",
+    	"List" => "Lista",
+    	"Count" => "Contador",
+    	"Cart" => "Carrito",
+    	"Login" => "Acceso",
+    	"Return" => "Volver",
+    	"id" => "Identificador",
+	"name" => "Nombre",
+	"descrip" => "Descripcion",
+	"price" => "Precio",
+	"option" => "Opciones",
+	"delete" => "Eliminar",
+	"iva" => "iva",
+	"sumTotal" => "Suma Total",
+	"buy" => "Comprar",
+	"addPro" => "Añadir Producto",
+	"image" => "Imagen",
+	"Send" =>  "Enviar",
+	"ReturnList" => "Volver a la lista",
+	"created" => "Creado correctamente",
+	"BuyPro" => "Comprar Producto",
+	"GoShop" => "Ir a la Tienda",
+	"links" => "Enlaçes",
+	"Tougle" => "Lenguaje",
+	"quantity" => "Cantidad",
+        "username" => "Usuario",
+        "password" => "Contraseña",
+)
+?>

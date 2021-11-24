@@ -1,0 +1,35 @@
+<?php
+//INGLES
+$lang = array(
+
+	"logfor" => "You have logged in with",
+	"Log" => "Log",
+        "Home" => "Home",
+        "List" => "List",
+        "Count" => "Count",
+        "Cart" => "Cart",
+        "Login" => "Login",
+        "Return" => "Return",
+        "id" => "identifier",
+        "name" => "Name",
+        "descrip" => "Description",
+        "price" => "Price",
+        "option" => "Opcions",
+        "delete" => "Delete",
+        "iva" => "VAT",
+        "sumTotal" => "Total Amount",
+        "buy" => "Buy",
+        "addPro" => "Add Product",
+        "image" => "Image",
+        "Send" =>  "Send",
+        "ReturnList" => "Return to list",
+        "created" => "Created correctly",
+        "BuyPro" => "Buy Product",
+        "GoShop" => "Go to Shop",
+        "links" => "Links",
+	"Tougle" => "Language",
+	"quantity" => "Quantity",
+	"username" => "Username",
+	"password" => "Password",
+)
+?>
