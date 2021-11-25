@@ -53,7 +53,7 @@ button {
 <body>
 <?php
 include('header.php');
-include('config-db.php');
+include('/conf/config-db.php');
 
 echo "<div class='login'>";
 echo "<h1>". $lang['Login']."</h1>";

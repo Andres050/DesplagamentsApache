@@ -71,7 +71,7 @@ button.center {
 </style>
 <body>
 <?php
-include('header.php');
+include('/header.php');
 include_once("Producto.php");
 include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductWithID.php');
 
@@ -93,7 +93,7 @@ if ($result->num_rows > 0) {
                 }
             }
             echo "<p><strong>".$lang['price'].":</strong> ". $ArrProducto[3] . "</p>";
-            echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $ArrProducto[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
+            echo "<button onclick=\"window.open('/conf/carretaAfegir.php?id=". $ArrProducto[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
         }
     }
 }

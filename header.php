@@ -1,5 +1,5 @@
 <?php
-include('configLang.php');
+include_once('/conf/configLang.php');
 ?>
 <header>
   <div class="brand-logo">
@@ -22,7 +22,6 @@ include('configLang.php');
           <div class="submenu">
                   <ul>
 <?php
-include('configLang.php');
 if (isset($idiomas)) {
         for ($x = 0, $size = count($idiomas); $x < $size; $x++) {
                 echo "<li><button onclick=\"window.open('/configLang.php?lang=".$idioma[$x]."','_blank');setTimeout(function(){location.reload()},500);\" type='button'>$idiomas[$x]</button></li>";
