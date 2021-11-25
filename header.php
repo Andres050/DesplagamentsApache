@@ -12,11 +12,11 @@ include('configLang.php');
   <nav>
     <ul class="navigation">
       <li><a href="#"><i class="fas fa-house-damage"></i><?php echo $lang['Home']?></a></li>
-      <li><a href="http://www.botiga.cat/llista.php"><i class="fas fa-list-ol"></i><?php echo $lang['List']?></a></li>
-      <li><a href="http://www.botiga.cat/counter.php"><i class="fas fa-sort-numeric-up"></i><?php echo $lang['Count']?></a></li>
-      <li><a href="http://www.botiga.cat/carreta.php"><i class="fas fa-shopping-cart"></i><?php echo $lang['Cart']?></a></li>
+      <li><a href="/llista.php"><i class="fas fa-list-ol"></i><?php echo $lang['List']?></a></li>
+      <li><a href="/counter.php"><i class="fas fa-sort-numeric-up"></i><?php echo $lang['Count']?></a></li>
+      <li><a href="/carreta.php"><i class="fas fa-shopping-cart"></i><?php echo $lang['Cart']?></a></li>
       <label for="toggle-btn" class="hide-menu-btn"><i class="fas fa-times"></i></label>
-      <li><a href="http://www.botiga.cat/login.php"><i class="far fa-address-card"></i><?php echo $lang['Login']?></a></li>
+      <li><a href="/login.php"><i class="far fa-address-card"></i><?php echo $lang['Login']?></a></li>
       <li>
           <a><i class='fas fa-language'></i><?php echo $lang['Tougle']?></a>
           <div class="submenu">
@@ -25,7 +25,7 @@ include('configLang.php');
 include('arrayLenguajes.php');
 if (isset($idiomas)) {
         for ($x = 0, $size = count($idiomas); $x < $size; $x++) {
-                echo "<li><button onclick=\"window.open('configLang.php?lang=".$idioma[$x]."','_blank');setTimeout(function(){location.reload()},500);\" type='button'>$idiomas[$x]</button></li>";
+                echo "<li><button onclick=\"window.open('/configLang.php?lang=".$idioma[$x]."','_blank');setTimeout(function(){location.reload()},500);\" type='button'>$idiomas[$x]</button></li>";
 	}
 }
 ?>

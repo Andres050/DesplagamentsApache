@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="/headerStyle.css">
 </head>
 <style>
     button {
@@ -96,14 +96,14 @@ if ($result->num_rows > 0) {
                 echo "<td>" . $rowTra['descripPro'] . "</td>";
             }
         }
-        echo "<td> " . $ArrProducto[3] . "</td><td> <img src=img/" . $ArrProducto[4] . " style='height: 100px; width: 100px;'></td><td><button onclick=\"window.open('fitxa.php?id=" . $ArrProducto[0] . "', '_self')\" type='button'>" . $lang['BuyPro'] . "</button></td></tr>";
+        echo "<td> " . $ArrProducto[3] . "</td><td> <img src=/img/" . $ArrProducto[4] . " style='height: 100px; width: 100px;'></td><td><button onclick=\"window.open('/fitxa.php?id=" . $ArrProducto[0] . "', '_self')\" type='button'>" . $lang['BuyPro'] . "</button></td></tr>";
     }
 }
 
 // AUTORIZACION PARA CREAR MAS OBJECTOS!!!
 if (isset($_SESSION["user"]) && isset($_SESSION["pass"])) {
     if ($_SESSION["user"]=="admin" && $_SESSION["pass"]=="12345") {
-        echo "</div><button class='footer' onclick=\"window.open('formulari.php', '_self')\" type='button'>". $lang['addPro']."</button>";
+        echo "</div><button class='footer' onclick=\"window.open('/formulari.php', '_self')\" type='button'>". $lang['addPro']."</button>";
     }
 }
 $conn->close();

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  <link rel="stylesheet" href="headerStyle.css">
+  <link rel="stylesheet" href="/headerStyle.css">
 </head>
 <style>
 button {
@@ -83,7 +83,7 @@ if ($result->num_rows > 0) {
             $ArrProducto = (array)$producto;
             $ArrProducto = array_values($ArrProducto);
 
-            echo "<div class='productos'><img class='center' src=img/". $row["img"] . ">";
+            echo "<div class='productos'><img class='center' src=/img/". $row["img"] . ">";
             include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
             echo "<tr><td>" . $ArrProducto[0] . "</td>";
             if ($tra->num_rows > 0) {
@@ -93,11 +93,11 @@ if ($result->num_rows > 0) {
                 }
             }
             echo "<p><strong>".$lang['price'].":</strong> ". $ArrProducto[3] . "</p>";
-            echo "<button onclick=\"window.open('carretaAfegir.php?id=". $ArrProducto[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
+            echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $ArrProducto[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
         }
     }
 }
-echo "<button class='center' onclick=\"window.open('carreta.php','_self')\">".$lang['GoShop']."</button>";
+echo "<button class='center' onclick=\"window.open('/carreta.php','_self')\">".$lang['GoShop']."</button>";
 $conn->close();
 ?>
 </body>

@@ -58,16 +58,16 @@
 <body>
 <header>
     <div class="brand-logo">
-        <img src="img/images.png"/>
+        <img src="/img/images.png"/>
     </div>
 
     <nav>
         <ul class="navigation">
-            <li><a href="http://botiga.cat/home.php">Home</a></li>
-            <li><a href="http://botiga.cat/llista.php">List</a></li>
-            <li><a href="http://botiga.cat/counter.php">Count</a></li>
-            <li><a href="http://botiga.cat/carreta.php">Cart</a></li>
-            <li><a href="http://botiga.cat/login.php">Login</a></li>
+            <li><a href="/home.php">Home</a></li>
+            <li><a href="/llista.php">List</a></li>
+            <li><a href="/counter.php">Count</a></li>
+            <li><a href="/carreta.php">Cart</a></li>
+            <li><a href="/login.php">Login</a></li>
         </ul>
     </nav>
 
