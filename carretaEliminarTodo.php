@@ -11,7 +11,7 @@ session_unset();
 <script>
 	window.close();
     window.open(
-        '/carreto.php',
+        '/carreta.php',
         '_self' // <- This is what makes it open in a new window.
     );
 </script>
