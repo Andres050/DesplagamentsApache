@@ -73,7 +73,7 @@ button {
 </style>
 <body>
 <?php
-include('/header.php');
+include('header.php');
 $csession = 'contadorSession';
 $nsession = 0;
 

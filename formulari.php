@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION["user"]) && isset($_SESSION["pass"])) {
 	if ($_SESSION["user"]!="admin" && $_SESSION["pass"]!="12345") {
-		header("Location: https://www.botiga.cat/llista.php");
+		header("Location: http://www.botiga.cat/llista.php");
 	}
 }
 ?>
@@ -88,9 +88,9 @@ input{
 </style>
 <body>
 <?php
-include('/header.php');
+include('header.php');
 include_once("ProductoInsert.php");
-include('/conf/config-db.php');
+include('config-db.php');
 $id = isset($_GET["id"]) ? $_GET["id"] : 2;
 $checked = FALSE;
 
