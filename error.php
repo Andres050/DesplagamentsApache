@@ -45,8 +45,8 @@
 </head>
 <body>
 <?php
-include('header.php');
-include('conf/config-db.php');
+include('/header.php');
+include('/conf/config-db.php');
 ?>
 <section style="padding-top: 300px">
   <h1 style="text-align: center; font-size: 100px">Pagina Personalizada Error 404</h1>
