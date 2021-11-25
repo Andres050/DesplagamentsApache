@@ -1,7 +1,7 @@
 <html><head></head>
 <body>
 <?php
-include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductWithID.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/CapaNegoci/selectProductWithID.php');
 
 session_start();
 
