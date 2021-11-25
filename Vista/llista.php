@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-    <link rel="stylesheet" href="/headerStyle.css">
+    <link rel="stylesheet" href="/css/headerStyle.css">
 </head>
 <style>
     button {
@@ -73,7 +73,7 @@
 <?php
 include('header.php');
 include_once("Producto.php");
-include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductos.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/CapaNegoci/selectProductos.php');
 
 echo "<div class='tableCenter'><table align='center'><tr><th>".$lang['id']."</th><th>".$lang['name']."</th><th>".$lang['descrip']."</th><th>".$lang["price"]."</th><th>".$lang['image']."</th><th>".$lang['links']."</th></tr>";
 
@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
         $ArrProducto = array_values($ArrProducto);
 
         // AÑADO EL SELECT DE LA DB DE LAS TRADUCIONES!!!
-        include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
+        include($_SERVER['DOCUMENT_ROOT'] . '/CapaNegoci/selectTraductions.php');
 
         echo "<tr><td>" . $ArrProducto[0] . "</td>";
         if ($tra->num_rows > 0) {
@@ -96,14 +96,14 @@ if ($result->num_rows > 0) {
                 echo "<td>" . $rowTra['descripPro'] . "</td>";
             }
         }
-        echo "<td> " . $ArrProducto[3] . "</td><td> <img src=/img/" . $ArrProducto[4] . " style='height: 100px; width: 100px;'></td><td><button onclick=\"window.open('/fitxa.php?id=" . $ArrProducto[0] . "', '_self')\" type='button'>" . $lang['BuyPro'] . "</button></td></tr>";
+        echo "<td> " . $ArrProducto[3] . "</td><td> <img src=/img/" . $ArrProducto[4] . " style='height: 100px; width: 100px;'></td><td><button onclick=\"window.open('/Vista/fitxa.php?id=" . $ArrProducto[0] . "', '_self')\" type='button'>" . $lang['BuyPro'] . "</button></td></tr>";
     }
 }
 
 // AUTORIZACION PARA CREAR MAS OBJECTOS!!!
 if (isset($_SESSION["user"]) && isset($_SESSION["pass"])) {
     if ($_SESSION["user"]=="admin" && $_SESSION["pass"]=="12345") {
-        echo "</div><button class='footer' onclick=\"window.open('/formulari.php', '_self')\" type='button'>". $lang['addPro']."</button>";
+        echo "</div><button class='footer' onclick=\"window.open('/Vista/formulari.php', '_self')\" type='button'>". $lang['addPro']."</button>";
     }
 }
 $conn->close();
