@@ -71,7 +71,7 @@
 </style>
 <body>
 <?php
-include('/header.php');
+include('header.php');
 include_once("Producto.php");
 include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductos.php');
 
