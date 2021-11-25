@@ -67,7 +67,7 @@ td, th {
 </style>
 <body>
 <?php
-include('/header.php');
+include('header.php');
 include('/conf/config-db.php');
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
@@ -83,7 +83,7 @@ if (isset($_SESSION["arrayItems"])) {
 
 echo "<tr><td></td><td><strong>".$lang['sumTotal']."</strong></td><td></td><td><strong>". $sumatotal. " $<strong></td><td></td></tr>";
 echo "</table></div></body>";
-echo "<div style='text-align:center'><button style='padding: 15px; margin-top: 50px' onclick=\"window.open('/conf/carretaEliminarTodo.php','_blank'); setTimeout(function(){location.reload()},1000);\" type='button'>".$lang['buy']."</button></div>";
+echo "<div style='text-align:center'><button style='padding: 15px; margin-top: 50px' onclick=\"window.open('conf/carretaEliminarTodo.php','_blank'); setTimeout(function(){location.reload()},1000);\" type='button'>".$lang['buy']."</button></div>";
 $conn->close();
 ?>
 </body>

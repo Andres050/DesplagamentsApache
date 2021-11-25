@@ -1,5 +1,5 @@
 <?php
-include_once('/conf/configLang.php');
+include('conf/configLang.php');
 ?>
 <header>
   <div class="brand-logo">
