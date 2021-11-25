@@ -13,7 +13,7 @@ if (isset($_SESSION["user"]) && isset($_SESSION["pass"])) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  <link rel="stylesheet" href="/css/headerStyle.css">
+  <link rel="stylesheet" href="/headerStyle.css">
 </head>
 <style>
 table {
@@ -102,7 +102,7 @@ echo $lang['price'].": <input type='number' name='price'><br>";
 echo $lang['image'].": <input type='text' name='img'<br>";
 echo "<br><input type='submit' name='submit' value".$lang['Send'].">";
 echo "</form>";
-echo "<button class='centerButton' type='button'><a href='/Vista/llista.php'/>" .$lang['ReturnList']."</button>";
+echo "<button class='centerButton' type='button'><a href='/llista.php'/>".$lang['ReturnList']."</button>";
 echo "</div></body>";
 
 if (isset($_GET['name']) && isset($_GET['desc']) && isset($_GET['price']) && isset($_GET['img']))  {
@@ -114,7 +114,8 @@ if (isset($_GET['name']) && isset($_GET['desc']) && isset($_GET['price']) && iss
 
 if ($checked === TRUE) {
 //$sql = "INSERT INTO $table (namePro, descriptPro, pricePro, img) values ($_GET['name'],$_GET['desc'], $_GET['price'],'newimg.png')";
-    include($_SERVER['DOCUMENT_ROOT'] . '/CapaNegoci/insertIntoProducto.php');
-}?>
+    include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/insertIntoProducto.php');
+}
+?>
 </body>
 </html>

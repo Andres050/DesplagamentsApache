@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  <link rel="stylesheet" href="/css/headerStyle.css">
+  <link rel="stylesheet" href="/headerStyle.css">
 </head>
 <style>
 button {
@@ -73,7 +73,7 @@ button.center {
 <?php
 include('header.php');
 include_once("Producto.php");
-include($_SERVER['DOCUMENT_ROOT'] . '/CapaNegoci/selectProductWithID.php');
+include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductWithID.php');
 
 if ($result->num_rows > 0) {
     // output data of each row
@@ -84,7 +84,7 @@ if ($result->num_rows > 0) {
             $ArrProducto = array_values($ArrProducto);
 
             echo "<div class='productos'><img class='center' src=/img/". $row["img"] . ">";
-            include($_SERVER['DOCUMENT_ROOT'] . '/CapaNegoci/selectTraductions.php');
+            include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
             echo "<tr><td>" . $ArrProducto[0] . "</td>";
             if ($tra->num_rows > 0) {
                 while ($rowTra = $tra->fetch_assoc()) {
@@ -97,7 +97,7 @@ if ($result->num_rows > 0) {
         }
     }
 }
-echo "<button class='center' onclick=\"window.open('/Vista/carreta.php','_self')\">".$lang['GoShop']."</button>";
+echo "<button class='center' onclick=\"window.open('/carreta.php','_self')\">".$lang['GoShop']."</button>";
 $conn->close();
 ?>
 </body>

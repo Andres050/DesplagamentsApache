@@ -63,11 +63,11 @@
 
     <nav>
         <ul class="navigation">
-            <li><a href="/Vista/home.php">Home</a></li>
-            <li><a href="/Vista/llista.php">List</a></li>
-            <li><a href="/Vista/counter.php">Count</a></li>
-            <li><a href="/Vista/carreta.php">Cart</a></li>
-            <li><a href="/Vista/login.php">Login</a></li>
+            <li><a href="/home.php">Home</a></li>
+            <li><a href="/llista.php">List</a></li>
+            <li><a href="/counter.php">Count</a></li>
+            <li><a href="/carreta.php">Cart</a></li>
+            <li><a href="/login.php">Login</a></li>
         </ul>
     </nav>
 
