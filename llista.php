@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
         $ArrProducto = array_values($ArrProducto);
 
         // AÑADO EL SELECT DE LA DB DE LAS TRADUCIONES!!!
-        include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
+        include($_SERVER['DOCUMENT_ROOT'].'CapaNegoci/selectTraductions.php');
 
         echo "<tr><td>" . $ArrProducto[0] . "</td>";
         if ($tra->num_rows > 0) {
