@@ -10,6 +10,10 @@ session_unset();
 ?>
 <script>
 	window.close();
+    window.open(
+        '/carreto.php',
+        '_self' // <- This is what makes it open in a new window.
+    );
 </script>
 </body>
 </html>
