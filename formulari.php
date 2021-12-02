@@ -107,7 +107,8 @@ echo "</div></body>";
 $arrayProductes = array();
 include "CapaNegoci/selectProductos.php";
 var_dump(count($arrayProductes));
-var_dump($arrayProductes[count($arrayProductes)-1]);
+$idFinal = $arrayProductes[count($arrayProductes)-1][0];
+echo $idFinal;
 
 if (isset($_GET['name']) && isset($_GET['desc']) && isset($_GET['price']) && isset($_GET['img']))  {
     $producto = new Producto(null, $_GET['name'],$_GET['desc'],$_GET['price'],$_GET['img']);
