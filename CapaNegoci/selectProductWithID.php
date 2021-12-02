@@ -13,7 +13,9 @@ if ($result->num_rows > 0) {
         if ($id == $row["idPro"]) {
             echo "ESTEFANIA!!!!!!!";
             $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
+            echo "ESTEFANIA!!!!!!!";
             var_dump($producto);
+            echo "ESTEFANIA!!!!!!!";
             $ArrProductoID = (array)$producto;
             $ArrProductoID = array_values($ArrProductoID);
             var_dump($ArrProductoID);
