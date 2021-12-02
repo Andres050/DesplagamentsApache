@@ -17,7 +17,7 @@ if (isset($_GET["id"])) {
     include("CapaNegoci/selectProductWithID.php");
     array_push($ArrProductoID,$quantity);
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
-		if ($ArrProductoID[0]["idPro"]==$_SESSION["arrayItems"][$x]["idPro"]) {
+		if ($ArrProductoID[0]==$_SESSION["arrayItems"][$x][0]) {
 			$_SESSION["arrayItems"][$x]["quantity"] += 1;
 			$hasSum = TRUE;
 			break;
