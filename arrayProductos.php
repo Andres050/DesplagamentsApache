@@ -1,4 +1,6 @@
 <?php
-$arrayProductes = array("ARRAYpRO");
+$arrayProductes = array();
+include "CapaNegoci/selectProductos.php";
 
-$arrayProductesTraducciones = array("ARRAYTRA");
+$arrayProductesTraducciones = array();
+include "CapaNegoci/selectTraductions.php";
