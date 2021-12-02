@@ -15,17 +15,17 @@ $newArray = array();
 
 for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
 	if ($_SESSION["arrayItems"][$x]->idPro!=$id) {
-        var_dump($_SESSION["arrayItems"][$x]->idPro);
-        echo $id;
-        array_push($newArray,$_SESSION["arrayItems"][$x]);
+		array_push($newArray,$_SESSION["arrayItems"][$x]);
         //unset($_SESSION["arrayItems"][array_search($x,$_SESSION["arrayItems"])]);
 	}
 }
-var_dump($newArray);
 $_SESSION["arrayItems"] = $newArray;
 
 //setcookie("arrayItems", json_encode($productos));
 $conn->close();
 ?>
+<script>
+    window.close();
+</script>
 </body>
 </html>
