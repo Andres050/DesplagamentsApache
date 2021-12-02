@@ -1,6 +1,7 @@
 <html><head></head>
 <body>
 <?php
+include("Producto.php");
 
 session_start();
 
