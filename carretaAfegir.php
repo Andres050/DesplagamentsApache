@@ -18,6 +18,7 @@ echo "??";
 
 $ArrProductoID = array();
 include("CapaNegoci/selectProductWithID.php");
+echo $id;
 array_push($ArrProductoID,$quantity);
 var_dump($ArrProductoID);
 
