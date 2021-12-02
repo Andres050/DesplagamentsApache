@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         if ($id == $row["idPro"]) {
             echo $id." == ". $row["idPro"];
-            $productoID = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
+            $productoID = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"],1);
         }
     }
 }
