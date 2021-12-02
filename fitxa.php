@@ -80,20 +80,20 @@ include("CapaNegoci/selectProductWithID.php");
 $ArrProductoTra = array();
 include "CapaNegoci/selectTraductions.php";
 
-var_dump($producto);
+var_dump($productoID);
 
-echo "<div class='productos'><img class='center' src=/img/". $producto->img . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
+echo "<div class='productos'><img class='center' src=/img/". $productoID->img . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
 //echo var_dump($ArrProductoTra);
 
 for ($x = 0; $x < count($ArrProductoTra); $x++) {
-    if ($producto->idPro===$ArrProductoTra[$x]->idPro) {
+    if ($productoID->idPro===$ArrProductoTra[$x]->idPro) {
         echo
             "<p><strong>".$lang['name']."</strong>" .$ArrProductoTra[$x]->namePro. "</p>".
             "<p><strong>".$lang['descrip']."</strong>" .$ArrProductoTra[$x]->descripPro. "</p>";
     }
 }
-echo "<p><strong>".$lang['price'].":</strong> ". $producto->pricePro . "</p>";
-echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $producto->idPro. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
+echo "<p><strong>".$lang['price'].":</strong> ". $productoID->pricePro . "</p>";
+echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $productoID->idPro. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
 
 echo "<button class='center' onclick=\"window.open('/carreta.php','_self')\">".$lang['GoShop']."</button>";
 $conn->close();
