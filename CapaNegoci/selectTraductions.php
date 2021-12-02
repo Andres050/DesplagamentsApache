@@ -12,7 +12,7 @@ if ($resultado->num_rows > 0) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
         $producto = array($row["idPro"],$row["namePro"],$row["descripPro"]);
         $producto = array_values($producto);
-        array_push($arrayProductesTraducciones, $producto);
+        array_push($productesTraducciones, $producto);
     }
 }
 ?>
