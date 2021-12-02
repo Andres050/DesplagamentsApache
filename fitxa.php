@@ -80,6 +80,8 @@ include("CapaNegoci/selectProductWithID.php");
 $ArrProductoTra = array();
 include "CapaNegoci/selectTraductions.php";
 
+var_dump($producto);
+
 echo "<div class='productos'><img class='center' src=/img/". $producto->img . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
 //echo var_dump($ArrProductoTra);
 
