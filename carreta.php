@@ -67,9 +67,9 @@ td, th {
 </style>
 <body>
 <?php
+include_once("Producto.php");
 include('header.php');
 include('config-db.php');
-include_once("Producto.php");
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
 echo "<table><tr><th>". $lang['id'] . "</th><th>". $lang['name']. "</th><th>".$lang['descrip']."</th><th>". $lang['price']."</th><th>".$lang['quantity']."</th><th>". $lang['option']. "</th></tr>";
