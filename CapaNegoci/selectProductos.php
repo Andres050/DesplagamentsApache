@@ -3,7 +3,7 @@ include_once('config-db.php');
 include_once("Producto.php");
 $table = "productos";
 
-$sql = "SELECT nombre_idioma, idPro, namePro, descriptPro FROM $table";
+$sql = "SELECT idPro, namePro, descriptPro, pricePro, img FROM $table";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
