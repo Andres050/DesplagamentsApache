@@ -75,6 +75,7 @@ echo "<table><tr><th>". $lang['id'] . "</th><th>". $lang['name']. "</th><th>".$l
 $sumatotal = 0;
 
 if (isset($_SESSION["arrayItems"])) {
+    var_dump($_SESSION["arrayItems"]);
 	for ($i = 0, $size = count($_SESSION["arrayItems"]); $i < $size; $i++) {
 		echo "<tr><td>" . $_SESSION["arrayItems"][$i]->idPro . "</td>";
         $ArrProductoTra = array();
