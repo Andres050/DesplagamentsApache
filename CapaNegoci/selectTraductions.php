@@ -4,7 +4,6 @@ include_once("Producto.php");
 $lenguaje  = $_SESSION['lang'];
 
 $resultado = "SELECT * FROM traducionProductos WHERE idPro = ". $arrayProductes[$i][0] . " AND nombre_idioma = '$lenguaje'";
-echo $resultado;
 $tra = $conn->query($resultado);
 if ($resultado->num_rows > 0) {
     // output data of each row
