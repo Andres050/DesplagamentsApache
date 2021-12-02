@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
             $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
             $ArrProductoID = (array)$producto;
             $ArrProductoID = array_values($ArrProductoID);
-            echo $ArrProductoID;
+            var_dump($ArrProductoID);
         }
     }
 }
