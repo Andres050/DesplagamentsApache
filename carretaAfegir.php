@@ -27,6 +27,8 @@ if (isset($_GET["id"])) {
 	if ($hasSum==FALSE) {
 		array_push($_SESSION["arrayItems"],$ArrProductoID);
 	}
+} else {
+    echo "no";
 }
 
 //setcookie("arrayItems", json_encode($productos));
