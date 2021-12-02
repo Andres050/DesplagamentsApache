@@ -4,8 +4,6 @@
 
 session_start();
 
-$id = isset($_GET["id"]);
-
 if (!isset($_SESSION["arrayItems"])) {
 $_SESSION["arrayItems"] = array();
 }
@@ -14,16 +12,14 @@ $quantity = array(
 );
 
 $hasSum = FALSE;
-echo "??";
 
 $ArrProductoID = array();
 include("CapaNegoci/selectProductWithID.php");
-echo $id;
+
 array_push($ArrProductoID,$quantity);
 var_dump($ArrProductoID);
 
 if (true) {
-    echo $id;
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
 		if ($ArrProductoID[0]==$_SESSION["arrayItems"][$x][0]) {
 			$_SESSION["arrayItems"][$x]["quantity"] += 1;
