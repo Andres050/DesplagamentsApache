@@ -74,6 +74,7 @@ $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 echo "<table><tr><th>". $lang['id'] . "</th><th>". $lang['name']. "</th><th>".$lang['descrip']."</th><th>". $lang['price']."</th><th>".$lang['quantity']."</th><th>". $lang['option']. "</th></tr>";
 $sumatotal = 0;
 
+var_dump($_SESSION["arrayItems"]);
 if (isset($_SESSION["arrayItems"])) {
 	for ($i = 0, $size = count($_SESSION["arrayItems"]); $i < $size; $i++) {
 		echo "<tr><td>" . $_SESSION["arrayItems"][$i]["idPro"] . "</td><td>" .$_SESSION["arrayItems"][$i]["namePro"]. "</td><td>". $_SESSION["arrayItems"][$i]["descriptPro"]. "</td><td>" . $_SESSION["arrayItems"][$i]["pricePro"] ."</td><td>". $_SESSION['arrayItems'][$i]['quantity']."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i]["idPro"]. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
