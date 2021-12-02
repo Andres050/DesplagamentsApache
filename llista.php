@@ -103,7 +103,7 @@ if ($result->num_rows > 0) {
     }
 }
 */
-echo var_dump($arrayProductes);
+echo var_dump($arrayProductesTraducciones);
 
 for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "su";
