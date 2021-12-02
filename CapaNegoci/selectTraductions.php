@@ -11,7 +11,9 @@ echo $resultadoTraducion;
 if ($tra->num_rows > 0) {
     while($row = $tra->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
-        $ArrProductoTra = array($row["idPro"],$row["namePro"],$row["descripPro"]);
+        $producto = new Producto($row["idPro"],$row["namePro"],$row["descripPro"],null,null);
+        $ArrProductoTra = array();
+        $ArrProductoTra = (array)$producto;
         $ArrProductoTra = array_values($ArrProductoTra);
     }
 }
