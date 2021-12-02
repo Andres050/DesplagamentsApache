@@ -1,6 +1,6 @@
 <?php
-include_once("config-db.php");
-include_once("Producto.php");
+include("config-db.php");
+include("Producto.php");
 $table = "traducionProductos";
 $lenguaje  = $_SESSION['lang'];
 
