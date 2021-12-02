@@ -85,9 +85,9 @@ if (isset($_SESSION["arrayItems"])) {
                     echo "<td>" .$ArrProductoTra[$x][1]. "</td>".
                         "<td>". $ArrProductoTra[$x][2]. "</td>";
                 }
-            }
+        }
 
-            echo "<td>" . $_SESSION["arrayItems"][$i][3] ."</td><td>". $_SESSION['arrayItems'][$i][5]."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i][0]. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
+        echo "<td>" . $_SESSION["arrayItems"][$i][3] ."</td><td>". $_SESSION['arrayItems'][$i][5]."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i][0]. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
 		$sumatotal += $_SESSION["arrayItems"][$i][3]*$_SESSION["arrayItems"][$i][5];
 	}
 }

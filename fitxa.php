@@ -83,8 +83,16 @@ include "CapaNegoci/selectTraductions.php";
 
 echo "<div class='productos'><img class='center' src=/img/". $ArrProductoID[4] . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
 //echo var_dump($ArrProductoTra);
-echo "<p><strong>".$lang['name']."</strong>". $ArrProductoTra[0][1] ."</p>";
-echo "<p><strong>".$lang['descrip']."</strong>". $ArrProductoTra[0][2] ."</p>";
+
+$ArrProductoTra = array();
+include "CapaNegoci/selectTraductions.php";
+for ($x = 0; $x < count($ArrProductoTra); $x++) {
+    if ($ArrProductoID[0]===$ArrProductoTra[$x][0]) {
+        echo
+            "<p><strong>".$lang['name']."</strong>" .$ArrProductoTra[$x][1]. "</p>".
+            "<p><strong>".$lang['descrip']."</strong>" .$ArrProductoTra[$x][2]. "</p>";
+    }
+}
 echo "<p><strong>".$lang['price'].":</strong> ". $ArrProductoID[3] . "</p>";
 echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $ArrProductoID[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
 
