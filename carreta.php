@@ -77,7 +77,7 @@ $sumatotal = 0;
 var_dump($_SESSION["arrayItems"]);
 if (isset($_SESSION["arrayItems"])) {
 	for ($i = 0, $size = count($_SESSION["arrayItems"]); $i < $size; $i++) {
-		echo "<tr><td>" . $_SESSION["arrayItems"][$i][0] . "</td><td>" .$_SESSION["arrayItems"][$i][1]. "</td><td>". $_SESSION["arrayItems"][$i][2]. "</td><td>" . $_SESSION["arrayItems"][$i][3] ."</td><td>". $_SESSION['arrayItems'][$i]['quantity']."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i]["idPro"]. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
+		echo "<tr><td>" . $_SESSION["arrayItems"][$i][0] . "</td><td>" .$_SESSION["arrayItems"][$i][1]. "</td><td>". $_SESSION["arrayItems"][$i][2]. "</td><td>" . $_SESSION["arrayItems"][$i][3] ."</td><td>". $_SESSION['arrayItems'][$i][5]."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i]["idPro"]. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
 		$sumatotal += $_SESSION["arrayItems"][$i][3]*$_SESSION["arrayItems"][$i]["quantity"];
 	}
 }
