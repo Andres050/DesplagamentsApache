@@ -108,7 +108,6 @@ for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "<td>". $arrayProductes[$i][0] ."</td>";
     echo "<td>". $arrayProductes[$i][1] ."</td>";
     $arrayProductesTraducciones = array();
-    echo $arrayProductes[$i][0];
     include "CapaNegoci/selectTraductions.php?idPro=". $arrayProductes[$i][0];
     echo var_dump($arrayProductesTraducciones);
     echo "<td>". $arrayProductesTraducciones[1] ."</td>";
