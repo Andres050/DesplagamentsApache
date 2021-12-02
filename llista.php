@@ -102,7 +102,7 @@ if ($result->num_rows > 0) {
     }
 }
 */
-
+$ArrProductoTra = array();
 for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
