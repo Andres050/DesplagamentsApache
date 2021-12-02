@@ -25,8 +25,5 @@ $_SESSION["arrayItems"] = $newArray;
 //setcookie("arrayItems", json_encode($productos));
 $conn->close();
 ?>
-<script>
-        window.close();
-</script>
 </body>
 </html>
