@@ -77,7 +77,7 @@ include "CapaNegoci/selectProductos.php";
 
 $ArrProductoTra = array();
 include "CapaNegoci/selectTraductions.php";
-var_dump($ArrProductoTra);
+//var_dump($ArrProductoTra);
 
 echo "<div class='tableCenter'><table align='center'><tr><th>".$lang['id']."</th><th>".$lang['name']."</th><th>".$lang['descrip']."</th><th>".$lang["price"]."</th><th>".$lang['image']."</th><th>".$lang['links']."</th></tr>";
 /*
