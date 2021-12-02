@@ -4,10 +4,10 @@ include_once("Producto.php");
 $table = "traducionProductos";
 $lenguaje  = $_SESSION['lang'];
 
-$resultadoTraducion = "SELECT nombre_idioma , idPro , namePro , descripPro FROM $table";
-$tra = $conn->query($resultadoTraducion);
+$resultado = "SELECT nombre_idioma , idPro , namePro , descripPro FROM $table";
+$tra = $conn->query($resultado);
 
-echo $resultadoTraducion;
+echo $resultado;
 if ($tra->num_rows > 0) {
     while($row = $tra->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
