@@ -71,16 +71,20 @@ button.center {
 </style>
 <body>
 <?php
-$ArrProductoID = array();
 include('header.php');
 include("Producto.php");
+
+$ArrProductoID = array();
 include("CapaNegoci/selectProductWithID.php");
 //var_dump($ArrProductoID);
 
+$ArrProductoTra = array();
+include "CapaNegoci/selectTraductions.php";
+
 echo "<div class='productos'><img class='center' src=/img/". $ArrProductoID[4] . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
 //echo var_dump($ArrProductoTra);
-echo "<p><strong>".$lang['name']."</strong>". $ArrProductoID[1] ."</p>";
-echo "<p><strong>".$lang['descrip']."</strong>". $ArrProductoID[2] ."</p>";
+echo "<p><strong>".$lang['name']."</strong>". $ArrProductoTra[1] ."</p>";
+echo "<p><strong>".$lang['descrip']."</strong>". $ArrProductoTra[2] ."</p>";
 echo "<p><strong>".$lang['price'].":</strong> ". $ArrProductoID[3] . "</p>";
 echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $ArrProductoID[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
 
