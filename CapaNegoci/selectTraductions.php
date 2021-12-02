@@ -13,7 +13,6 @@ if ($tra->num_rows > 0) {
     while($row = $tra->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
         $producto = array($row["idPro"],$row["namePro"],$row["descripPro"]);
-        var_dump($producto);
         array_push($ArrProductoTra, $producto);
     }
 }

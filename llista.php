@@ -74,36 +74,13 @@
 include('header.php');
 $arrayProductes = array();
 include "CapaNegoci/selectProductos.php";
+//var_dump($arrayProductes);
 
 $ArrProductoTra = array();
 include "CapaNegoci/selectTraductions.php";
 //var_dump($ArrProductoTra);
 
 echo "<div class='tableCenter'><table align='center'><tr><th>".$lang['id']."</th><th>".$lang['name']."</th><th>".$lang['descrip']."</th><th>".$lang["price"]."</th><th>".$lang['image']."</th><th>".$lang['links']."</th></tr>";
-/*
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
-        $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
-        $ArrProducto = (array)$producto;
-        $ArrProducto = array_values($ArrProducto);
-
-        // AÑADO EL SELECT DE LA DB DE LAS TRADUCIONES!!!
-        include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
-
-        echo "<tr><td>" . $ArrProducto[0] . "</td>";
-        if ($tra->num_rows > 0) {
-            while ($rowTra = $tra->fetch_assoc()) {
-                // USO LA DB DE COMENTARIOS Y EL NOMBRE!!!
-                echo "<td><strong>" . $rowTra['namePro'] . "</strong></td>";
-                echo "<td>" . $rowTra['descripPro'] . "</td>";
-            }
-        }
-        echo "<td> " . $ArrProducto[3] . "</td><td> <img src=/img/" . $ArrProducto[4] . " style='height: 100px; width: 100px;'></td><td><button onclick=\"window.open('/fitxa.php?id=" . $ArrProducto[0] . "', '_self')\" type='button'>" . $lang['BuyPro'] . "</button></td></tr>";
-    }
-}
-*/
 for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
