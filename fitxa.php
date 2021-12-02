@@ -72,11 +72,11 @@ button.center {
 <body>
 <?php
 include('header.php');
-include_once("Producto.php");
-include($_SERVER['DOCUMENT_ROOT']."CapaNegoci/selectProductWithID.php");
+include("Producto.php");
+include("CapaNegoci/selectProductWithID.php");
+var_dump($ArrProducto);
 
 for ($i = 0; $i < count($ArrProducto); $i++) {
-    var_dump($ArrProducto);
     echo "<div class='productos'><img class='center' src=/img/". $ArrProducto[4] . ">";
     include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
     //echo var_dump($ArrProductoTra);
