@@ -1,6 +1,7 @@
 <html><head></head>
 <body>
 <?php
+include_once("Producto.php");
 include('config-db.php');
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
