@@ -1,7 +1,7 @@
 <html><head></head>
 <body>
 <?php
-include("Producto.php");
+include_once("Producto.php");
 
 session_start();
 
@@ -28,7 +28,6 @@ if (isset($_GET["id"])) {
 	}
 }
 
-//setcookie("arrayItems", json_encode($productos));
 $conn->close();
 ?>
 </body>
