@@ -4,6 +4,8 @@
 
 session_start();
 
+$id = isset($_GET["id"]) ? 0;
+
 if (!isset($_SESSION["arrayItems"])) {
 $_SESSION["arrayItems"] = array();
 }
