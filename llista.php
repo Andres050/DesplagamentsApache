@@ -74,9 +74,14 @@
 include('header.php');
 $arrayProductes = array();
 include "CapaNegoci/selectProductos.php";
+var_dump($arrayProductes);
+
+echo "<br>
+";
 
 $ArrProductoTra = array();
 include "CapaNegoci/selectTraductions.php";
+var_dump($ArrProductoTra);
 
 
 echo "<div class='tableCenter'><table align='center'><tr><th>".$lang['id']."</th><th>".$lang['name']."</th><th>".$lang['descrip']."</th><th>".$lang["price"]."</th><th>".$lang['image']."</th><th>".$lang['links']."</th></tr>";
@@ -108,7 +113,6 @@ for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
     //echo var_dump($ArrProductoTra);
-    var_dump($ArrProductoTra);
     echo "<td>". $ArrProductoTra[1] ."</td>";
     echo "<td>". $ArrProductoTra[2] ."</td>";
     echo "<td>". $arrayProductes[$i][3] ."</td>";
