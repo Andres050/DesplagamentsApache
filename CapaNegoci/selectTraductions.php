@@ -10,7 +10,9 @@ if ($resultado->num_rows > 0) {
     // output data of each row
     while($row = $resultado->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
-        $producto = array($row["idPro"],$row["namePro"],$row["descripPro"]);
+        $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
+        $ArrProductoTra = (array)$producto;
+        $ArrProductoTra = array_values($ArrProductoTra);
     }
 }
 ?>
