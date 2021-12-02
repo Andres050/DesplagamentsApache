@@ -2,11 +2,11 @@
 
 class Producto {
 
-    private $idPro;
-    private $namePro;
-    private $descripPro;
-    private $pricePro;
-    private $img;
+    public $idPro;
+    public $namePro;
+    public $descripPro;
+    public $pricePro;
+    public $img;
 
     public function __construct($idPro, $namePro,$descripPro, $pricePro,$img) {
         $this->idPro = $idPro;
