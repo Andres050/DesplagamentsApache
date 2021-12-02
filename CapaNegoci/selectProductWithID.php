@@ -2,9 +2,9 @@
 include_once('config-db.php');
 $table = "productos";
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
-echo "true";
 
 $sql = "SELECT * FROM $table where idPro='$id'";
+echo $sql;
 $result = $conn->query($sql);
 echo "true";
 if ($result->num_rows > 0) {
