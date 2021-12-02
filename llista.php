@@ -105,7 +105,7 @@ if ($result->num_rows > 0) {
 */
 echo var_dump($arrayProductes);
 
-for ($i = 0; $i < $arrayProductes.length; $i++) {
+for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "su";
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
