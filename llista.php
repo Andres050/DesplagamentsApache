@@ -72,6 +72,7 @@
 <body>
 <?php
 include('header.php');
+include("Producto.php");
 $arrayProductes = array();
 include "CapaNegoci/selectProductos.php";
 //var_dump($arrayProductes);
