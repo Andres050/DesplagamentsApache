@@ -14,6 +14,7 @@ if ($resultado->num_rows > 0) {
         $ArrProductoTra = (array)$producto;
         $ArrProductoTra = array_values($ArrProductoTra);
         array_push($arrayProductesTraducciones,$ArrProductoTra);
+        echo 2;
     }
 }
 ?>
