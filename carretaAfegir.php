@@ -4,7 +4,7 @@
 
 session_start();
 
-$id = isset($_GET["id"]) ? 0;
+$id = isset($_GET["id"]);
 
 if (!isset($_SESSION["arrayItems"])) {
 $_SESSION["arrayItems"] = array();
