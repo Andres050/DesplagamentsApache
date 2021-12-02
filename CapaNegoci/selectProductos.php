@@ -13,7 +13,7 @@ if ($result->num_rows > 0) {
         $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
         $ArrProducto = (array)$producto;
         $ArrProducto = array_values($ArrProducto);
-        array_merge($arrayProductes, $ArrProducto);
+        array_push($arrayProductes, $ArrProducto);
     }
 }
 ?>
