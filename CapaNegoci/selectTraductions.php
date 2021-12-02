@@ -12,7 +12,8 @@ if ($tra->num_rows > 0) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
         $producto = new Producto($row["idPro"],$row["namePro"],$row["descripPro"],null,null);
         $ProductoTra = (array)$producto;
-        $ProductoTra = array_values($ArrProductoTra, $ProductoTra);
+        $ProductoTra = array_values($ProductoTra);
+        array_push($ArrProductoTra, $ProductoTra);
     }
 }
 ?>
