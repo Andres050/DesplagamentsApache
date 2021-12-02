@@ -1,4 +1,4 @@
 <?php
-$arrayProductes = array();
+$arrayProductes = array("ARRAYpRO");
 
-$arrayProductesTraducciones = array();
+$arrayProductesTraducciones = array("ARRAYTRA");
