@@ -72,7 +72,11 @@
 <body>
 <?php
 include('header.php');
-include($_SERVER['DOCUMENT_ROOT'].'arrayProductos.php');
+$arrayProductes = array();
+include "CapaNegoci/selectProductos.php";
+
+$arrayProductesTraducciones = array();
+include "CapaNegoci/selectTraductions.php";
 
 echo "<div class='tableCenter'><table align='center'><tr><th>".$lang['id']."</th><th>".$lang['name']."</th><th>".$lang['descrip']."</th><th>".$lang["price"]."</th><th>".$lang['image']."</th><th>".$lang['links']."</th></tr>";
 /*
