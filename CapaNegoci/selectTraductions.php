@@ -2,7 +2,7 @@
 include_once("config-db.php");
 include_once("Producto.php");
 $lenguaje  = $_SESSION['lang'];
-$idPro = $row["idPro"];
+$idPro = $_GET["idPro"];
 
 $resultado = "SELECT * FROM traducionProductos WHERE idPro = $idPro AND nombre_idioma = '$lenguaje'";
 $tra = $conn->query($resultado);
