@@ -7,6 +7,8 @@ $table = "traducionProductos";
 $resultado = "SELECT * FROM $table WHERE idPro = '". $arrayProductes[$i][0] . "'";
 $tra = $conn->query($resultado);
 
+echo $resultado;
+
 if ($tra->num_rows > 0) {
     // output data of each row
     while($row = $tra->fetch_assoc()) {
