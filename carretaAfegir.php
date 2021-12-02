@@ -18,7 +18,7 @@ if (true) {
 
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
 		if ($ArrProductoID[0]==$_SESSION["arrayItems"][$x][0]) {
-			$_SESSION["arrayItems"][$x]["quantity"] += 1;
+			$_SESSION["arrayItems"][$x][5] += 1;
 			$hasSum = TRUE;
 			break;
 		}
