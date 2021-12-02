@@ -4,17 +4,17 @@ include_once("Producto.php");
 $lenguaje  = $_SESSION['lang'];
 $table = "traducionProductos";
 
-$resultado = "SELECT * FROM $table";
-$tra = $conn->query($resultado);
+$result = "SELECT * FROM $table";
+$tra = $conn->query($result);
 
-echo $resultado;
+echo $result;
 
 if ($tra->num_rows > 0) {
     // output data of each row
     while($row = $tra->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
         $producto = array($row["idPro"],$row["namePro"],$row["descripPro"]);
-        array_merge($ArrProductoTra, $producto);
+        array_push($ArrProductoTra, $producto);
     }
 }
 ?>
