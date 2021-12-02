@@ -83,8 +83,6 @@ include "CapaNegoci/selectTraductions.php";
 echo "<div class='productos'><img class='center' src=/img/". $producto->img . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
 //echo var_dump($ArrProductoTra);
 
-$ArrProductoTra = array();
-include "CapaNegoci/selectTraductions.php";
 for ($x = 0; $x < count($ArrProductoTra); $x++) {
     if ($producto->idPro===$ArrProductoTra[$x]->idPro) {
         echo
