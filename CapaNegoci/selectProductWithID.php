@@ -5,7 +5,6 @@ $table = "productos";
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
 $sql = "SELECT * FROM $table where idPro='$id'";
-echo $sql;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -17,7 +16,6 @@ if ($result->num_rows > 0) {
             echo "ESTEFANIA!!!!!!!";
             $ArrProductoID = (array)$producto;
             $ArrProductoID = array_values($ArrProductoID);
-            var_dump($ArrProductoID);
         }
     }
 }
