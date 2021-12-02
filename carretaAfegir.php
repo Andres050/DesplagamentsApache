@@ -15,7 +15,7 @@ $hasSum = FALSE;
 
 echo "false";
 $arrayProductes = array();
-include "CapaNegoci/selectProductos.php";
+include "CapaNegoci/selectProductWithID.php";
 echo "true";
 
 array_push($ArrProductoID,$quantity);
