@@ -7,6 +7,7 @@ session_start();
 if (!isset($_SESSION["arrayItems"])) {
 $_SESSION["arrayItems"] = array();
 }
+$_SESSION["arrayItems"] = array();
 
 $hasSum = FALSE;
 
