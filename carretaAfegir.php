@@ -16,7 +16,6 @@ $hasSum = FALSE;
 echo "false";
 $arrayProductes = array();
 include "CapaNegoci/selectProductWithID.php";
-echo "true";
 
 array_push($ArrProductoID,$quantity);
 var_dump($ArrProductoID);
