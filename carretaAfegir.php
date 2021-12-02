@@ -20,7 +20,6 @@ include "CapaNegoci/selectProductWithID.php";
 array_push($ArrProductoID,$quantity);
 var_dump($ArrProductoID);
 
-/*
 if (true) {
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
 		if ($ArrProductoID[0]==$_SESSION["arrayItems"][$x][0]) {
@@ -34,7 +33,7 @@ if (true) {
 	}
 } else {
     echo "no";
-}*/
+}
 
 //setcookie("arrayItems", json_encode($productos));
 $conn->close();
