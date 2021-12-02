@@ -15,12 +15,14 @@ $quantity = array(
 
 $hasSum = FALSE;
 echo "??";
+
+$ArrProductoID = array();
+include("CapaNegoci/selectProductWithID.php");
+array_push($ArrProductoID,$quantity);
+var_dump($ArrProductoID);
+
 if (true) {
     echo $id;
-    $ArrProductoID = array();
-    include("CapaNegoci/selectProductWithID.php");
-    array_push($ArrProductoID,$quantity);
-    var_dump($ArrProductoID);
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
 		if ($ArrProductoID[0]==$_SESSION["arrayItems"][$x][0]) {
 			$_SESSION["arrayItems"][$x]["quantity"] += 1;
