@@ -107,6 +107,7 @@ echo var_dump($arrayProductes);
 echo var_dump($arrayProductesTraducciones);
 
 for ($i = 0; $i < $arrayProductes.length; $i++) {
+    echo "su";
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
     echo "<td>". $arrayProductes[$i][1] ."</td>";
