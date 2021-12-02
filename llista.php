@@ -75,6 +75,8 @@ include('header.php');
 $arrayProductes = array();
 include "CapaNegoci/selectProductos.php";
 
+$ArrProductoTra = array();
+include "CapaNegoci/selectTraductions.php";
 
 
 echo "<div class='tableCenter'><table align='center'><tr><th>".$lang['id']."</th><th>".$lang['name']."</th><th>".$lang['descrip']."</th><th>".$lang["price"]."</th><th>".$lang['image']."</th><th>".$lang['links']."</th></tr>";
@@ -103,10 +105,8 @@ if ($result->num_rows > 0) {
 }
 */
 for ($i = 0; $i < count($arrayProductes); $i++) {
-    $ArrProductoTra = array();
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
-    include "CapaNegoci/selectTraductions.php";
     //echo var_dump($ArrProductoTra);
     var_dump($ArrProductoTra);
     echo "<td>". $ArrProductoTra[1] ."</td>";
