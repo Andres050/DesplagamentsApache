@@ -90,6 +90,7 @@ for ($x = 0; $x < count($ArrProductoTra); $x++) {
         echo
             "<p><strong>".$lang['name']."</strong>" .$ArrProductoTra[$x]->namePro. "</p>".
             "<p><strong>".$lang['descrip']."</strong>" .$ArrProductoTra[$x]->descripPro. "</p>";
+        break;
     }
 }
 echo "<p><strong>".$lang['price'].":</strong> ". $productoID->pricePro . "</p>";
