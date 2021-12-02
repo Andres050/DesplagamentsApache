@@ -1,12 +1,12 @@
 <?php
 include_once("config-db.php");
 include_once("Producto.php");
+$table = "traducionProductos";
 $lenguaje  = $_SESSION['lang'];
 
-$resultadoTraducion = "SELECT * FROM traducionProductos";
+$resultadoTraducion = "SELECT * FROM $table";
 $tra = $conn->query($resultadoTraducion);
 echo $resultadoTraducion;
-echo $tra;
 if ($tra->num_rows > 0) {
     // output data of each row
     while($row = $tra->fetch_assoc()) {
