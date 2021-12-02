@@ -11,7 +11,9 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
         $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
-        var_dump($producto);
+        echo $producto.idPro;
+        echo $producto[idPro];
+        echo $producto["idPro"];
         $ArrProducto = (array)$producto;
         $ArrProducto = array_values($ArrProducto);
         array_push($arrayProductes, $ArrProducto);
