@@ -10,7 +10,7 @@ if ($resultado->num_rows > 0) {
     // output data of each row
     while($row = $resultado->fetch_assoc()) {
         // CREO EL OBJETO PRODUCTO CON EL CONTENIDO DE CADA PRODUCTO!!!
-        $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
+        $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],null,null);
         $ArrProductoTra = (array)$producto;
         $ArrProductoTra = array_values($ArrProductoTra);
         array_push($arrayTraduccionsProductes,$ArrProductoTra);

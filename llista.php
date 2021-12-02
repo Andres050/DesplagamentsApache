@@ -104,7 +104,6 @@ if ($result->num_rows > 0) {
 */
 
 for ($i = 0; $i < count($arrayProductes); $i++) {
-    echo "su";
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
     echo "<td>". $arrayProductes[$i][1] ."</td>";
