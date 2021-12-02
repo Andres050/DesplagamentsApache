@@ -103,8 +103,8 @@ if ($result->num_rows > 0) {
 }
 */
 $ArrProductoTra = array();
+var_dump($arrayProductes);
 for ($i = 0; $i < count($arrayProductes); $i++) {
-    var_dump($arrayProductes);
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
     include "CapaNegoci/selectTraductions.php";
