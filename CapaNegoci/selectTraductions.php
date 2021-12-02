@@ -4,7 +4,7 @@ include_once("Producto.php");
 $lenguaje  = $_SESSION['lang'];
 $idPro = $_GET["idPro"];
 
-$resultado = "SELECT * FROM traducionProductos WHERE idPro = ". $arrayProductes[$i][0]. " AND nombre_idioma = '$lenguaje'";
+$resultado = "SELECT * FROM traducionProductos WHERE idPro = $idPro AND nombre_idioma = '$lenguaje'";
 $tra = $conn->query($resultado);
 if ($resultado->num_rows > 0) {
     // output data of each row
@@ -14,7 +14,6 @@ if ($resultado->num_rows > 0) {
         $ArrProductoTra = (array)$producto;
         $ArrProductoTra = array_values($ArrProductoTra);
         array_push($arrayProductesTraducciones,$ArrProductoTra);
-        echo 2;
     }
 }
 ?>
