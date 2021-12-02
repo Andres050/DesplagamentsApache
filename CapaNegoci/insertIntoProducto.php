@@ -1,5 +1,5 @@
 <?php
-$table = "productes";
+$table = "productos";
 $sql = "INSERT INTO $table (namePro, descriptPro, pricePro, img) VALUES ('" .$ArrProducto[1]. "','" .$ArrProducto[2]. "'," .$ArrProducto[3]. ",'" .$ArrProducto[4]. "')";
 
 if ($conn->query($sql) === TRUE) {
