@@ -88,8 +88,8 @@ if (isset($_SESSION["arrayItems"])) {
                 }
         }
 
-        echo "<td>" . $_SESSION["arrayItems"][$i]->pricePro ."</td><td>". $_SESSION['arrayItems'][$i][5]."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i]->pricePro. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
-		$sumatotal += $_SESSION["arrayItems"][$i]->pricePro*$_SESSION["arrayItems"][$i][5];
+        echo "<td>" . $_SESSION["arrayItems"][$i]->pricePro ."</td><td>". $_SESSION['arrayItems'][$i]->quantity."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i]->pricePro. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
+		$sumatotal += $_SESSION["arrayItems"][$i]->pricePro*$_SESSION["arrayItems"][$i]->quantity;
 	}
 }
 
