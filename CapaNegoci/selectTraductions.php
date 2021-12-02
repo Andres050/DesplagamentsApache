@@ -6,9 +6,9 @@ $lenguaje  = $_SESSION['lang'];
 $resultado = "SELECT * FROM traducionProductos WHERE idPro = ". $arrayProductes[$i][0];
 $tra = $conn->query($resultado);
 //echo $resultado;
-if ($resultado->num_rows > 0) {
+if ($tra->num_rows > 0) {
     // output data of each row
-    while($row = $resultado->fetch_assoc()) {
+    while($row = $tra->fetch_assoc()) {
         echo $row;
         echo $row["idPro"];
         echo $row["namePro"];
