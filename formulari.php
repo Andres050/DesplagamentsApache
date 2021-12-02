@@ -106,6 +106,7 @@ echo "<button class='centerButton' type='button'><a href='/llista.php'/>".$lang[
 echo "</div></body>";
 $arrayProductes = array();
 include "CapaNegoci/selectProductos.php";
+var_dump($arrayProductes);
 $idFinal = $arrayProductes[count($arrayProductes)][0];
 echo $idFinal;
 
