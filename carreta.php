@@ -74,13 +74,13 @@ $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 echo "<table><tr><th>". $lang['id'] . "</th><th>". $lang['name']. "</th><th>".$lang['descrip']."</th><th>". $lang['price']."</th><th>".$lang['quantity']."</th><th>". $lang['option']. "</th></tr>";
 $sumatotal = 0;
 
-var_dump($_SESSION["arrayItems"]);
 if (isset($_SESSION["arrayItems"])) {
 	for ($i = 0, $size = count($_SESSION["arrayItems"]); $i < $size; $i++) {
-		echo "<tr><td>" . $_SESSION["arrayItems"][$i][0] . "</td>".
-            $ArrProductoTra = array();
-            include "CapaNegoci/selectTraductions.php";
-            for ($x = 0; $x < count($ArrProductoTra); $x++) {
+		echo "<tr><td>" . $_SESSION["arrayItems"][$i][0] . "</td>";
+        $ArrProductoTra = array();
+        include "CapaNegoci/selectTraductions.php";
+        var_dump($_SESSION["arrayItems"]);
+        for ($x = 0; $x < count($ArrProductoTra); $x++) {
                 if ($_SESSION["arrayItems"][$i][0]===$ArrProductoTra[$x][1]) {
                     echo "<td>" .$ArrProductoTra[$x][2]. "</td>".
                         "<td>". $ArrProductoTra[$x][3]. "</td>";
