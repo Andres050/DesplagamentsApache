@@ -1,7 +1,6 @@
 <html><head></head>
 <body>
 <?php
-include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductWithID.php');
 
 session_start();
 
@@ -15,22 +14,18 @@ $quantity = array(
 $hasSum = FALSE;
 
 if (isset($_GET["id"])) {
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-	$row=array_merge($row,$quantity);
+    include("CapaNegoci/selectProductWithID.php");
+    array_push($ArrProductoID,$quantity);
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
-		if ($row["idPro"]==$_SESSION["arrayItems"][$x]["idPro"]) {
+		if ($ArrProductoID[0]["idPro"]==$_SESSION["arrayItems"][$x]["idPro"]) {
 			$_SESSION["arrayItems"][$x]["quantity"] += 1;
 			$hasSum = TRUE;
 			break;
 		}
 	}
 	if ($hasSum==FALSE) {
-		array_push($_SESSION["arrayItems"],$row);
-		break;
+		array_push($_SESSION["arrayItems"],$ArrProductoID);
 	}
-    }
-}
 }
 
 //setcookie("arrayItems", json_encode($productos));

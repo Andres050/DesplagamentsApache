@@ -75,7 +75,7 @@ $ArrProductoID = array();
 include('header.php');
 include("Producto.php");
 include("CapaNegoci/selectProductWithID.php");
-var_dump($ArrProductoID);
+//var_dump($ArrProductoID);
 
 echo "<div class='productos'><img class='center' src=/img/". $ArrProductoID[4] . ">"; include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
 //echo var_dump($ArrProductoTra);
