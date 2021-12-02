@@ -12,8 +12,8 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         if ($id == $row["idPro"]) {
             $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
-            $ArrProducto = (array)$producto;
-            $ArrProducto = array_values($ArrProducto);
+            $ArrProductoID = (array)$producto;
+            $ArrProductoID = array_values($ArrProductoID);
         }
     }
 }
