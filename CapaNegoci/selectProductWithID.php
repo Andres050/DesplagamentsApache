@@ -1,6 +1,6 @@
 <?php
 include_once('config-db.php');
-include("Producto.php");
+include_once("Producto.php");
 $table = "productos";
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
