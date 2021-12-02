@@ -10,7 +10,7 @@ $_SESSION["arrayItems"] = array();
 
 $hasSum = FALSE;
 
-if (true) {
+if (isset($_GET["id"])) {
     $arrayProductes = array();
     include "CapaNegoci/selectProductWithID.php";
 
@@ -23,15 +23,16 @@ if (true) {
 			break;
 		}
 	}
-	if ($hasSum==FALSE) {
+	if ($hasSum==false) {
 		array_push($_SESSION["arrayItems"],$ArrProductoID);
 	}
-} else {
-    echo "no";
 }
 
 //setcookie("arrayItems", json_encode($productos));
 $conn->close();
 ?>
+<script>
+    window.close();
+</script>
 </body>
 </html>
