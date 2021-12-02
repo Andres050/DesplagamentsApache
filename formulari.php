@@ -104,12 +104,12 @@ echo "<br><input type='submit' name='submit' value".$lang['Send'].">";
 echo "</form>";
 echo "<button class='centerButton' type='button'><a href='/llista.php'/>".$lang['ReturnList']."</button>";
 echo "</div></body>";
+$arrayProductes = array();
+include "CapaNegoci/selectProductos.php";
+$idFinal = $arrayProductes[count($arrayProductes)][0];
+echo $idFinal;
 
 if (isset($_GET['name']) && isset($_GET['desc']) && isset($_GET['price']) && isset($_GET['img']))  {
-    $arrayProductes = array();
-    include "CapaNegoci/selectProductos.php";
-    $idFinal = $arrayProductes[count($arrayProductes)][0];
-    echo $idFinal;
     $producto = new Producto(null, $_GET['name'],$_GET['desc'],$_GET['price'],$_GET['img']);
     $ArrProducto = (array)$producto;
     $ArrProducto = array_values($ArrProducto);
