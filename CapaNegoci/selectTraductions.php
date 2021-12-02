@@ -2,9 +2,10 @@
 include_once("config-db.php");
 include_once("Producto.php");
 $lenguaje  = $_SESSION['lang'];
+$table = "traducionProductos";
 
-$resultadoTraducion = "SELECT * FROM traducionProductos WHERE idPro = '". $arrayProductes[$i][0] . "'";
-$tra = $conn->query($resultadoTraducion);
+$resultado = "SELECT * FROM $table WHERE idPro = '". $arrayProductes[$i][0] . "'";
+$tra = $conn->query($resultado);
 
 if ($tra->num_rows > 0) {
     // output data of each row
