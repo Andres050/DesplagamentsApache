@@ -82,8 +82,8 @@ if (isset($_SESSION["arrayItems"])) {
         var_dump($ArrProductoTra[0][0]);
         for ($x = 0; $x < count($ArrProductoTra); $x++) {
                 if ($_SESSION["arrayItems"][$i][0]===$ArrProductoTra[$x][0]) {
-                    echo "<td>" .$ArrProductoTra[$x][2]. "</td>".
-                        "<td>". $ArrProductoTra[$x][3]. "</td>";
+                    echo "<td>" .$ArrProductoTra[$x][1]. "</td>".
+                        "<td>". $ArrProductoTra[$x][2]. "</td>";
                 }
             }
 
