@@ -79,9 +79,9 @@ if (isset($_SESSION["arrayItems"])) {
 		echo "<tr><td>" . $_SESSION["arrayItems"][$i][0] . "</td>";
         $ArrProductoTra = array();
         include "CapaNegoci/selectTraductions.php";
-        var_dump($ArrProductoTra);
+        var_dump($ArrProductoTra[0][0]);
         for ($x = 0; $x < count($ArrProductoTra); $x++) {
-                if ($_SESSION["arrayItems"][$i][0]===$ArrProductoTra[$x][1]) {
+                if ($_SESSION["arrayItems"][$i][0]===$ArrProductoTra[$x][0]) {
                     echo "<td>" .$ArrProductoTra[$x][2]. "</td>".
                         "<td>". $ArrProductoTra[$x][3]. "</td>";
                 }
