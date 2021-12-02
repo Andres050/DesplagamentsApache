@@ -3,8 +3,9 @@ include_once('config-db.php');
 $table = "productos";
 $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
-$sql = "SELECT idPro, namePro, descriptPro, pricePro, img FROM $table where idPro='$id'";
+$sql = "SELECT * FROM $table where idPro='$id'";
 $result = $conn->query($sql);
+echo $result;
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
