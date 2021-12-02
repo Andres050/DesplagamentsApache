@@ -4,7 +4,7 @@ include_once("Producto.php");
 $table = "traducionProductos";
 $lenguaje  = $_SESSION['lang'];
 
-$resultado = "SELECT nombre_idioma , idPro , namePro , descripPro FROM $table";
+$resultado = "SELECT * FROM $table";
 $tra = $conn->query($resultado);
 
 if ($tra->num_rows > 0) {

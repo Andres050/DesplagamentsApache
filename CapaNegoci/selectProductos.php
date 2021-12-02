@@ -16,5 +16,4 @@ if ($result->num_rows > 0) {
         array_push($arrayProductes, $ArrProducto);
     }
 }
-$conn->close();
 ?>
