@@ -74,10 +74,10 @@ $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
 echo "<table><tr><th>". $lang['id'] . "</th><th>". $lang['name']. "</th><th>".$lang['descrip']."</th><th>". $lang['price']."</th><th>".$lang['quantity']."</th><th>". $lang['option']. "</th></tr>";
 $sumatotal = 0;
+var_dump($_SESSION["arrayItems"]);
 
 if (isset($_SESSION["arrayItems"])) {
 	for ($i = 0, $size = count($_SESSION["arrayItems"]); $i < $size; $i++) {
-        var_dump($_SESSION["arrayItems"][$i]);
         echo "<tr><td>" . $_SESSION["arrayItems"][$i]->idPro . "</td>";
         $ArrProductoTra = array();
         include "CapaNegoci/selectTraductions.php";
