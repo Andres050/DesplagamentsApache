@@ -13,9 +13,9 @@ $quantity = array(
 
 $hasSum = FALSE;
 
-$ArrProductoID = array();
 echo "false";
-include("CapaNegoci/selectProductWithID.php");
+$arrayProductes = array();
+include "CapaNegoci/selectProductos.php";
 echo "true";
 
 array_push($ArrProductoID,$quantity);
