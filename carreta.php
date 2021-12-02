@@ -76,18 +76,18 @@ $sumatotal = 0;
 
 if (isset($_SESSION["arrayItems"])) {
 	for ($i = 0, $size = count($_SESSION["arrayItems"]); $i < $size; $i++) {
-		echo "<tr><td>" . $_SESSION["arrayItems"][$i][0] . "</td>";
+		echo "<tr><td>" . $_SESSION["arrayItems"][$i]->idPro . "</td>";
         $ArrProductoTra = array();
         include "CapaNegoci/selectTraductions.php";
         for ($x = 0; $x < count($ArrProductoTra); $x++) {
-                if ($_SESSION["arrayItems"][$i][0]===$ArrProductoTra[$x][0]) {
-                    echo "<td>" .$ArrProductoTra[$x][1]. "</td>".
-                        "<td>". $ArrProductoTra[$x][2]. "</td>";
+                if ($_SESSION["arrayItems"][$i]->idPro===$ArrProductoTra[$x]->idPro) {
+                    echo "<td>" .$ArrProductoTra[$x]->namePro. "</td>".
+                        "<td>". $ArrProductoTra[$x]->descripPro. "</td>";
                 }
         }
 
-        echo "<td>" . $_SESSION["arrayItems"][$i][3] ."</td><td>". $_SESSION['arrayItems'][$i][5]."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i][0]. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
-		$sumatotal += $_SESSION["arrayItems"][$i][3]*$_SESSION["arrayItems"][$i][5];
+        echo "<td>" . $_SESSION["arrayItems"][$i]->pricePro ."</td><td>". $_SESSION['arrayItems'][$i][5]."</td><td class='delRight'><button class='delRightButton' onclick=\"window.open('/carretaEliminar.php?id=". $_SESSION["arrayItems"][$i]->pricePro. "', '_blank'); setTimeout(function(){location.reload()},500);\" type='button'>".$lang['delete']."</button></td>";
+		$sumatotal += $_SESSION["arrayItems"][$i]->pricePro*$_SESSION["arrayItems"][$i][5];
 	}
 }
 

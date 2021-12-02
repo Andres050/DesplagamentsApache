@@ -14,7 +14,7 @@ if (!isset($_SESSION["arrayItems"])) {
 $newArray = array();
 
 for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
-	if ($_SESSION["arrayItems"][$x][0]!=$id) {
+	if ($_SESSION["arrayItems"][$x]->idPro!=$id) {
 		array_push($newArray,$_SESSION["arrayItems"][$x]);
 	}
 }
