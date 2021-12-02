@@ -15,6 +15,7 @@ if (isset($_GET["id"])) {
     include "CapaNegoci/selectProductWithID.php";
 
     array_push($productoID,1);
+    var_dump($productoID);
 
 	for ($x = 0, $size = count($_SESSION["arrayItems"]); $x < $size; $x++) {
 		if ($productoID->idPro==$_SESSION["arrayItems"][$x]->idPro) {
@@ -31,8 +32,5 @@ if (isset($_GET["id"])) {
 //setcookie("arrayItems", json_encode($productos));
 $conn->close();
 ?>
-<script>
-    window.close();
-</script>
 </body>
 </html>
