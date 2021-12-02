@@ -5,6 +5,7 @@ $id = isset($_GET["id"]) ? $_GET["id"] : 1;
 
 $sql = "SELECT * FROM $table where idPro='$id'";
 $result = $conn->query($sql);
+echo $sql;
 echo $result;
 if ($result->num_rows > 0) {
     // output data of each row
