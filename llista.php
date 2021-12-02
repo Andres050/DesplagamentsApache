@@ -107,11 +107,10 @@ for ($i = 0; $i < count($arrayProductes); $i++) {
     echo "<tr>";
     echo "<td>". $arrayProductes[$i][0] ."</td>";
     echo "<td>". $arrayProductes[$i][1] ."</td>";
-    $arrayProductesTraducciones = array();
     include "CapaNegoci/selectTraductions.php";
-    echo var_dump($arrayProductesTraducciones);
-    echo "<td>". $arrayProductesTraducciones[1] ."</td>";
-    echo "<td>". $arrayProductesTraducciones[2] ."</td>";
+    echo var_dump($ArrProductoTra);
+    echo "<td>". $ArrProductoTra[1] ."</td>";
+    echo "<td>". $ArrProductoTra[2] ."</td>";
     echo "<td>". $arrayProductes[$i][3] ."</td>";
     echo "<td><img src='/img/". $arrayProductes[$i][4] ."' style='height: 100px; width: 100px;'></td>";
     echo "<td><button onclick=\"window.open('/fitxa.php?id=" . $arrayProductes[$i][5] . "', '_self')\" type='button'>" . $lang['BuyPro'] . "</button></td>";

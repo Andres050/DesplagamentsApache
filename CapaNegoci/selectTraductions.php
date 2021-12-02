@@ -12,7 +12,6 @@ if ($resultado->num_rows > 0) {
         $producto = new Producto($row["idPro"],$row["namePro"],$row["descripPro"],null,null);
         $ArrProductoTra = (array)$producto;
         $ArrProductoTra = array_values($ArrProductoTra);
-        array_push($arrayProductesTraducciones,$ArrProductoTra);
     }
 }
 ?>
