@@ -73,29 +73,16 @@ button.center {
 <?php
 include('header.php');
 include_once("Producto.php");
-include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectProductWithID.php');
+include($_SERVER['DOCUMENT_ROOT']."CapaNegoci/selectProductWithID.php");
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        if ($id == $row["idPro"]) {
-            $producto = new Producto($row["idPro"],$row["namePro"],$row["descriptPro"],$row["pricePro"],$row["img"]);
-            $ArrProducto = (array)$producto;
-            $ArrProducto = array_values($ArrProducto);
-
-            echo "<div class='productos'><img class='center' src=/img/". $row["img"] . ">";
-            include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
-            echo "<tr><td>" . $ArrProducto[0] . "</td>";
-            if ($tra->num_rows > 0) {
-                while ($rowTra = $tra->fetch_assoc()) {
-                    echo "<p><strong>".$lang['name']."</strong> ". $rowTra["namePro"] . "</p>";
-                    echo "<p><strong>".$lang['descrip'].":</strong> " . $rowTra["descripPro"] . "</p>";
-                }
-            }
-            echo "<p><strong>".$lang['price'].":</strong> ". $ArrProducto[3] . "</p>";
-            echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $ArrProducto[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
-        }
-    }
+for ($i = 0; $i < count($producto); $i++) {
+    echo "<div class='productos'><img class='center' src=/img/". $producto[4] . ">";
+    include($_SERVER['DOCUMENT_ROOT'].'/CapaNegoci/selectTraductions.php');
+    //echo var_dump($ArrProductoTra);
+    echo "<p><strong>".$lang['name']."</strong>". $ArrProductoTra[1] ."</p>";
+    echo "<p><strong>".$lang['descrip']."</strong>". $ArrProductoTra[2] ."</p>";
+    echo "<p><strong>".$lang['price'].":</strong> ". $producto[3] . "</p>";
+    echo "<button onclick=\"window.open('/carretaAfegir.php?id=". $producto[0]. "', '_blank')\" type='button'>".$lang['BuyPro']."</button></div>";
 }
 echo "<button class='center' onclick=\"window.open('/carreta.php','_self')\">".$lang['GoShop']."</button>";
 $conn->close();
