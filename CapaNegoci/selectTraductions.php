@@ -3,7 +3,7 @@ include_once("config-db.php");
 include_once("Producto.php");
 $lenguaje  = $_SESSION['lang'];
 
-$resultado = "SELECT * FROM traducionProductos WHERE idPro = ". $arrayProductes[$i][0];
+$resultado = "SELECT * FROM traducionProductos WHERE idPro = '". $arrayProductes[$i][0] . "' AND nombre_idioma = '$lenguaje'";
 $tra = $conn->query($resultado);
 //echo $resultado;
 if ($tra->num_rows > 0) {
